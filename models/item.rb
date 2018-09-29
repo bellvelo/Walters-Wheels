@@ -41,7 +41,7 @@ end
 
 def self.all()
   sql = "SELECT * FROM items"
-  pizzas = SqlRunner.run(sql)
+  items = SqlRunner.run(sql)
   result = items.map {|item| Item.new(item)}
   return result
 end
@@ -49,7 +49,7 @@ end
 def self.find(id)
   sql = "SELECT * FROM items WHERE id = $1"
   values = [id]
-  pizza = SqlRunner.run(sql, values)
+  item = SqlRunner.run(sql, values)
   result = Item.new(item.first)
   return result
 end

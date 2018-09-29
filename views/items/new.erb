@@ -1,0 +1,38 @@
+<form method="post" action="/items">
+  <!--when we hit submit, it will send a post request to this route, ensure the action matches that on controller-->
+  <label for="manufacturer-select">Select a Man_ID:</label>
+  <select id="manufacturer-select" name="manufacturer_id">
+    <option value="Shimano">Shimano</option>
+    <option value="Chris King">Chris King</option>
+    <option value="Continental">Continental</option>
+    <option value="Zipp">Zipp</option>
+  </select>
+
+  <!-- <input id ="manufacturer_id" type="number" name="manufacturer_id"/> -->
+  <!-- name: these should match the fields on the hash -->
+  <!-- for and id should be the same -->
+
+  <label for="component">Component:</label>
+  <input id ="component" type="text" name="component"/>
+
+  <label for="cost">Cost:</label>
+  <input id ="cost" type="number" name="cost" min="1"/>
+
+  <label for="price">Price:</label>
+  <input id ="price" type="number" name="price" min="1"/>
+
+  <label for="margin">Margin:</label>
+  <input id ="margin" type="number" name="margin" min="1"/>
+
+  <label for="quantity">Quantity:</label>
+  <input id ="quantity" type="number" name="quantity" min="1"/>
+
+  <label for="low_stock">Low Stock:</label>
+  <input id ="low_stock" type="number" name="low_stock" min="1"/>
+
+  <label for="critical_stock">Critical Stock:</label>
+  <input id ="critical_stock" type="number" name="critical_stock" min="1"/>
+
+
+  <input type="submit" value="Add Item"/>
+</form>
