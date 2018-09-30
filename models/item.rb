@@ -39,6 +39,10 @@ def stock_level()
   end
 end
 
+def most_profitable
+  
+end
+
 def self.all()
   sql = "SELECT * FROM items"
   items = SqlRunner.run(sql)

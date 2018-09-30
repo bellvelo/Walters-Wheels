@@ -59,7 +59,7 @@ item3 = Item.new({
   "cost" => 10,
   "price" => 40,
   "margin" => 4,
-  "quantity" => 200,
+  "quantity" => 49,
   "low_stock" => 50,
   "critical_stock" => 25
 })
@@ -81,7 +81,7 @@ item5 = Item.new({
   "cost" => 5,
   "price" => 10,
   "margin" => 2,
-  "quantity" => 60,
+  "quantity" => 5,
   "low_stock" => 20,
   "critical_stock" => 10
 })

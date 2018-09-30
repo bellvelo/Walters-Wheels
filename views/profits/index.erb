@@ -1,1 +1,28 @@
 <h1>Most Profitable Items</h1>
+
+<table id="profitable stock">
+  <thead>
+    <tr>
+      <th>Item ID</th>
+      <th>Man ID</th>
+      <th>Component</th>
+      <th>Cost</th>
+      <th>Price</th>
+      <th>Margin</th>
+      <th>Quantity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% for item in @items%>
+      <tr>
+        <td><%=item.id%></td>
+        <td><%=item.manufacturer_id%></td>
+        <td><%=item.component%></td>
+        <td><%=item.cost.to_i%></td>
+        <td><%=item.price.to_i%></td>
+        <td><%=item.margin.to_i%></td>
+        <td><%=item.quantity.to_i%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

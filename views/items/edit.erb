@@ -1,19 +1,11 @@
 <form method="post" action="/items/<%=@item.id%>">
-  <label for="manufacturer-select">Select a Man_ID:</label>
-  <select value="manufacturer-select" name="manufacturers.name">
 
-    <option value="Shimano"
-    <%="selected" if @item.manufacturer_id == 1%>>Shimano</option>
-
-    <option value="Chris King"
-    <%="selected" if @item.manufacturer_id == 2%>>Chris King</option>
-
-    <option value="Continental"
-    <%="selected" if @item.manufacturer_id == 3%>>Continental</option>
-
-    <option value="Zipp"
-    <%="selected" if @item.manufacturer_id == 4%>>Zipp</option>
-  </select>
+  <label for="manufacturer-select">Select Manafacturer</label>
+    <select id="manufacturer-select" name="manufacturer_id">
+      <%@manufacturers.each do |manufacturer| %>
+        <option value=<%=manufacturer.id%>><%=manufacturer.name%></option>
+      <%end%>
+    </select>
 
   <label for="component">Component:</label>
   <input value ="<%=@item.component%>" type="text" name="component"/>
