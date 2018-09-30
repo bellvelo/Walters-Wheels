@@ -1,5 +1,9 @@
 <h1> List of all Items </h1>
-<a href = "/items/new"> New Item</a>
+
+<form method="get" action="/items/new">
+  <input type="submit" value="New Item">
+</form>
+<br>
 <table id="all-items">
   <thead>
     <tr>
@@ -19,15 +23,15 @@
     <% for item in @items%>
       <tr>
         <td><%=item.id%></td>
-        <td><%=item.manufacturer_id.to_i%></td>
+        <td><%=item.manufacturer_id%></td>
         <td><%=item.component%></td>
         <td><%=item.cost.to_i%></td>
-        <td><%=item.price.to_i%></td>
+        <td><%=item.sale_price.to_i%></td>
         <td><%=item.margin.to_i%></td>
         <td><%=item.quantity.to_i%></td>
         <td><%=item.low_stock.to_i%></td>
         <td><%=item.critical_stock.to_i%></td>
-        <td><a href="/items/<%=item.id%>/edit">Edit</a></td>
+        <td><a href="/items/<%=item.id%>">Edit</a></td>
       </tr>
     <%end%>
   </tbody>

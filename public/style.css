@@ -1,6 +1,7 @@
 h1 {
   color: #FE5F55;
-  font-size: 30px
+  font-size: 30px;
+  font-family: Verdana;
 }
 li {
     float: left;

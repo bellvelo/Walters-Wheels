@@ -14,15 +14,18 @@ end
 
 get "/items/new" do # fetch form to create new record
   @manufacturers = Manufacturer.all
+  @items = Item.all()
   erb(:"items/new")
 end
 
 get "/items/:id" do
+  @manufacturers = Manufacturer.all
   @item = Item.find(params[:id].to_i)
   erb(:"items/show")
 end
 
 post "/items"  do # create new record
+  @manufacturers = Manufacturer.all
   @item = Item.new(params)
   @item.save()
   redirect to("/items")
@@ -37,6 +40,7 @@ get "/items/:id/edit" do
 end
 
 post "/items/:id" do
+  @manufacturers = Manufacturer.all
   @item = Item.new(params)
   @item.update()
   redirect to("/items")

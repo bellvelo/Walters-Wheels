@@ -1,3 +1,5 @@
+<h1>Edit Item</h1>
+
 <form method="post" action="/items/<%=@item.id%>">
 
   <label for="manufacturer-select">Select Manafacturer</label>
@@ -14,7 +16,7 @@
   <input value ="<%=@item.cost%>" type="number" name="cost" min="1"/>
 
   <label for="price">Price:</label>
-  <input value ="<%=@item.sale%>" type="number" name="price" min="1"/>
+  <input value ="<%=@item.sale_price%>" type="number" name="price" min="1"/>
 
   <label for="margin">Margin:</label>
   <input value ="<%=@item.margin%>" type="number" name="margin" min="1"/>
