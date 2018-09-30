@@ -18,8 +18,8 @@ def initialize(options)
 end
 
 def find_man_name
-
-end   
+  find manID
+end
 
 def sale_price()
   return (@cost * @margin)
@@ -41,10 +41,6 @@ def stock_level()
   else
     return "OK"
   end
-end
-
-def most_profitable
-
 end
 
 def self.all()

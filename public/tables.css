@@ -1,0 +1,31 @@
+th {
+  color: #4F6367;
+  border: 1px solid #4F6367;
+}
+
+td {
+  border: 1px solid #4F6367;
+  /* border-collapse: collapse; */
+}
+
+tr {
+  border: 1px solid #4F6367;
+  /* border-collapse: collapse; */
+}
+
+#all-items {
+  border-collapse: collapse;
+  width: 100%;
+}
+#manufacturers {
+  border-collapse: collapse;
+  width: 100%;
+}
+#profitable-stock {
+  border-collapse: collapse;
+  width: 100%;
+}
+#critical-stock {
+  border-collapse: collapse;
+  width: 100%;
+}
