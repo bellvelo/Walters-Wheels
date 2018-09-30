@@ -1,10 +1,10 @@
 <h2> List of all Items </h2>
 <a href = "/items/new"> New Item</a>
-<table id="item">
+<table id="all-items">
   <thead>
     <tr>
       <th>Item ID</th>
-      <th>Manu ID</th>
+      <th>Man ID</th>
       <th>Component</th>
       <th>Cost</th>
       <th>Price</th>
@@ -19,7 +19,7 @@
     <% for item in @items%>
       <tr>
         <td><%=item.id%></td>
-        <td><%=item.manufacturer_id%></td>
+        <td><%=item.manufacturer_id.to_i%></td>
         <td><%=item.component%></td>
         <td><%=item.cost.to_i%></td>
         <td><%=item.price.to_i%></td>
@@ -29,6 +29,6 @@
         <td><%=item.critical_stock.to_i%></td>
         <td><a href="/items/<%=item.id%>/edit">Edit</a></td>
       </tr>
-    <% end %>
+    <%end%>
   </tbody>
 </table>

@@ -17,6 +17,10 @@ def initialize(options)
   @critical_stock = options["critical_stock"].to_i
 end
 
+def find_man_name
+
+end   
+
 def sale_price()
   return (@cost * @margin)
 end
@@ -40,7 +44,7 @@ def stock_level()
 end
 
 def most_profitable
-  
+
 end
 
 def self.all()
