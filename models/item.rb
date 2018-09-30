@@ -7,7 +7,7 @@ attr_accessor :manufacturer_id, :component, :cost, :price, :margin, :quantity, :
 
 def initialize(options)
   @id = options["id"].to_i
-  @manufacturer_id = options["manufacturer_id"]
+  @manufacturer_id = options["manufacturer_id"].to_i
   @component = options["component"]
   @cost = options["cost"].to_i
   @price = options["price"].to_i
@@ -91,7 +91,7 @@ def update()
     critical_stock
   ) = ($1, $2, $3, $4, $5, $6, $7, $8)
   WHERE id = $9"
-  values = [@manufacturer_id, @component, @cost, @price, @margin, @quantity, @low_stock, @critical_stock]
+  values = [@manufacturer_id, @component, @cost, @price, @margin, @quantity, @low_stock, @critical_stock, @id]
   item_data = SqlRunner.run(sql, values)
 end
 

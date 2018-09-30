@@ -1,0 +1,40 @@
+<form method="post" action="/items/<%=@item.id%>">
+  <label for="manufacturer-select">Select a Man_ID:</label>
+  <select value="manufacturer-select" name="manufacturers.name">
+
+    <option value="Shimano"
+    <%="selected" if @item.manufacturer_id == 1%>>Shimano</option>
+
+    <option value="Chris King"
+    <%="selected" if @item.manufacturer_id == 2%>>Chris King</option>
+
+    <option value="Continental"
+    <%="selected" if @item.manufacturer_id == 3%>>Continental</option>
+
+    <option value="Zipp"
+    <%="selected" if @item.manufacturer_id == 4%>>Zipp</option>
+  </select>
+
+  <label for="component">Component:</label>
+  <input value ="<%=@item.component%>" type="text" name="component"/>
+
+  <label for="cost">Cost:</label>
+  <input value ="<%=@item.cost%>" type="number" name="cost" min="1"/>
+
+  <label for="price">Price:</label>
+  <input value ="<%=@item.price%>" type="number" name="price" min="1"/>
+
+  <label for="margin">Margin:</label>
+  <input value ="<%=@item.margin%>" type="number" name="margin" min="1"/>
+
+  <label for="quantity">Quantity:</label>
+  <input value ="<%@item.quantity%>" type="number" name="quantity" min="1"/>
+
+  <label for="low_stock">Low Stock:</label>
+  <input value ="<%=@item.low_stock%>" type="number" name="low_stock" min="1"/>
+
+  <label for="critical_stock">Critical Stock:</label>
+  <input value ="<%=@item.critical_stock%>" type="number" name="critical_stock" min="1"/>
+
+  <input type="submit" value="Edit item"/>
+</form>

@@ -1,0 +1,14 @@
+<h1>hello</h1>
+<form method="post" action="/manufacturers/<%=@manufacturer.id%>">
+
+  <label for="name">Name:</label>
+  <input value ="<%=@manufacturer.name%>" type="text" name="name"/>
+
+  <label for="address">Address:</label>
+  <input value ="<%=@manufacturer.address%>" type="text" name="address"/>
+
+  <label for="phone">Phone:</label>
+  <input value ="<%=@manufacturer.phone%>" type="text" name="phone"/>
+
+  <input type="submit" value="Edit Manufacturer"/>
+</form>

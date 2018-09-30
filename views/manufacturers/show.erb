@@ -1,0 +1,16 @@
+<h2>Manufacturer Details</h2>
+
+<p>Name: <%= @manufacturer.name() %></p>
+<p>Address: <%= @manufacturer.address() %></p>
+<p>Phone: <%= @manufacturer.phone() %></p>
+
+<form method="post" action="/manufacturers/<%=@manufacturer.id%>/delete">
+  <input type="submit" value="Remove Manufacturer">  <!--submit is a type of button -->
+</form>
+<!--
+method = verb - either post or get, depending on REST route,
+action = the URL of the path -->
+
+<form method="get" action="/manufacturers/<%=@manufacturer.id%>/edit">
+  <input type="submit" value="Amend Manufacturer">
+</form>

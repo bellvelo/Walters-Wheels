@@ -1,0 +1,24 @@
+<h2> List of all Manufacturers </h2>
+<a href = "/manufacturers/new"> New Manufacturer</a>
+<table id="manufacturers">
+  <thead>
+    <tr>
+      <th>Manufacturer ID</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Phone</th>
+      <th>Edit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% for manufacturer in @manufacturers%>
+      <tr>
+        <td><%=manufacturer.id%></td>
+        <td><%=manufacturer.name%></td>
+        <td><%=manufacturer.address%></td>
+        <td><%=manufacturer.phone%></td>
+        <td><a href="/manufacturers/<%=manufacturer.id%>">Edit</a></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

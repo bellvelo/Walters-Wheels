@@ -27,7 +27,7 @@
         <td><%=item.quantity.to_i%></td>
         <td><%=item.low_stock.to_i%></td>
         <td><%=item.critical_stock.to_i%></td>
-        <td><a href="/items/<%= item.id %>">Edit</a></td>
+        <td><a href="/items/<%=item.id%>/edit">Edit</a></td>
       </tr>
     <% end %>
   </tbody>

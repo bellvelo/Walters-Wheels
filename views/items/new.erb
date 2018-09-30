@@ -1,16 +1,15 @@
 <form method="post" action="/items">
-  <!--when we hit submit, it will send a post request to this route, ensure the action matches that on controller-->
-  <label for="manufacturer-select">Select a Man_ID:</label>
-  <select id="manufacturer-select" name="manufacturer_id">
-    <option value="Shimano">Shimano</option>
-    <option value="Chris King">Chris King</option>
-    <option value="Continental">Continental</option>
-    <option value="Zipp">Zipp</option>
-  </select>
 
-  <!-- <input id ="manufacturer_id" type="number" name="manufacturer_id"/> -->
-  <!-- name: these should match the fields on the hash -->
-  <!-- for and id should be the same -->
+  <!-- <label for="manufacturer">Manufacturer:</label>
+  <input id ="manufacturer" type="text" name="item.manufacturer.id"/> -->
+
+  <label for="manufacturer-select">Select Manafacturer</label>
+    <select id="manufacturer-select" name="manufacturer_id"> <!--select is a drop down-->
+      <option value="Shimano">Shimano</option> <!-- options are the choices on the dropdown-->
+      <option value="Chris King">Chris King</option>
+      <option value="Continental">Continental</option>
+      <option value="Zipp">Zipp</option>
+    </select>
 
   <label for="component">Component:</label>
   <input id ="component" type="text" name="component"/>

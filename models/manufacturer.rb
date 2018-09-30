@@ -53,7 +53,7 @@ def update()
     phone
   ) = ($1, $2, $3)
   WHERE id = $4"
-  values = [@name, @address, @phone]
+  values = [@name, @address, @phone, @id]
   manufacturer_data = SqlRunner.run(sql, values)
 end
 
