@@ -1,21 +1,23 @@
 th {
   color: #4F6367;
   border: 1px solid #4F6367;
+  background-color: #EEF5DB;
 }
 
 td {
   border: 1px solid #4F6367;
-  /* border-collapse: collapse; */
+  background-color: #EEF5DB;
 }
 
 tr {
   border: 1px solid #4F6367;
-  /* border-collapse: collapse; */
+  background-color: #EEF5DB;
 }
 
 #all-items {
   border-collapse: collapse;
   width: 100%;
+  background-color: #EEF5DB;
 }
 #manufacturers {
   border-collapse: collapse;

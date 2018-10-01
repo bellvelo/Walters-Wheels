@@ -86,6 +86,39 @@ item5 = Item.new({
   "critical_stock" => 10
 })
 item5.save()
+item6 = Item.new({
+  "manufacturer_id" => manufacturer2.id,
+  "component" => "free-hub",
+  "cost" => 55,
+  "price" => 90,
+  # "margin" => 2,
+  "quantity" => 10,
+  "low_stock" => 10,
+  "critical_stock" => 5
+})
+item6.save()
+item7 = Item.new({
+  "manufacturer_id" => manufacturer4.id,
+  "component" => "aero-blades",
+  "cost" => 130,
+  "price" => 175,
+  # "margin" => 2,
+  "quantity" => 2,
+  "low_stock" => 5,
+  "critical_stock" => 3
+})
+item7.save()
+item8 = Item.new({
+  "manufacturer_id" => manufacturer1.id,
+  "component" => "carbon rim",
+  "cost" => 165,
+  "price" => 250,
+  # "margin" => 2,
+  "quantity" => 10,
+  "low_stock" => 6,
+  "critical_stock" => 3
+})
+item8.save()
 
 
 

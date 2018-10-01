@@ -1,4 +1,9 @@
-h1, h2{
+h1{
+  color: #B8D8D8;
+  /* font-size: 30px; */
+  font-family: Verdana;
+}
+h2{
   color: #4F6367;
   /* font-size: 30px; */
   font-family: Verdana;
@@ -17,7 +22,6 @@ body {
 }
 
 .yield-info {
-
   background-color: #B8D8D8;
   border: 1px solid #FE5F55;
   opacity: 0.8;
@@ -47,6 +51,6 @@ img {
     font-size: 15px;
 }
 .navbar a:hover {
-
     color: white;
     font-weight: bold;
+}    
