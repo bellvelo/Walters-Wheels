@@ -18,20 +18,20 @@ def setup
   @item = Item.new(options)
 end
 
-def test_sale_price
-  @item1 = Item.new({
-    # "manufacturer_id" => manufacturer1.id,
-    "component" => "rim",
-    "cost" => 20,
-    "price" => 30,
-    "margin" => 2,
-    "quantitiy" => 5,
-    "low_stock" => 10,
-    "critical_stock" => 6
-  })
-  assert_equal(40, @item1.sale_price())
+# def test_sale_price
+#   @item1 = Item.new({
+#     # "manufacturer_id" => manufacturer1.id,
+#     "component" => "rim",
+#     "cost" => 20,
+#     "price" => 30,
+#     "margin" => 2,
+#     "quantitiy" => 5,
+#     "low_stock" => 10,
+#     "critical_stock" => 6
+#   })
+#   assert_equal(40, @item1.sale_price())
+# end
 
-end
 def test_stock_level()
   @item1 = Item.new({
     # "manufacturer_id" => manufacturer1.id,
@@ -50,14 +50,14 @@ def test_markup()
   @item1 = Item.new({
     # "manufacturer_id" => manufacturer1.id,
     "component" => "rim",
-    "cost" => 20,
-    "price" => 50,
+    "cost" => 150,
+    "price" =>200,
     "margin" => 2,
     "quantitiy" => 5,
     "low_stock" => 10,
     "critical_stock" => 6
   })
-  assert_equal(200, @item1.markup())
+  assert_equal(33, @item1.markup())
 end
 
 # def test_component()

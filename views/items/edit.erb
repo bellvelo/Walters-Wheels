@@ -11,19 +11,19 @@
 
   <label for="component">Component:</label>
   <input value ="<%=@item.component%>" type="text" name="component"/>
-
+<br>
   <label for="cost">Cost:</label>
   <input value ="<%=@item.cost%>" type="number" name="cost" min="1"/>
 
   <label for="price">Price:</label>
-  <input value ="<%=@item.sale_price%>" type="number" name="price" min="1"/>
+  <input value ="<%=@item.price%>" type="number" name="price" min="1"/>
 
-  <label for="margin">Margin:</label>
-  <input value ="<%=@item.margin%>" type="number" name="margin" min="1"/>
+  <!-- <label for="margin">Margin:</label>
+  <input value ="<%=@item.markup%>" type="number" name="margin" min="1"/> -->
 
   <label for="quantity">Quantity:</label>
   <input value ="<%=@item.quantity%>" type="number" name="quantity" min="1"/>
-
+<br>
   <label for="low_stock">Low Stock:</label>
   <input value ="<%=@item.low_stock%>" type="number" name="low_stock" min="1"/>
 

@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner')
+require('pry')
 
 class Item
 
@@ -11,22 +12,17 @@ def initialize(options)
   @component = options["component"]
   @cost = options["cost"].to_i
   @price = options["price"].to_i
-  @margin = options["margin"].to_i
+  # @margin = options["margin"].to_i
   @quantity = options["quantity"].to_i
   @low_stock = options["low_stock"].to_i
   @critical_stock = options["critical_stock"].to_i
 end
 
-def find_man_name
-  find manID
-end
-
-def sale_price()
-  return (@cost * @margin)
-end
-
 def markup
-  return (@price/@cost)*100
+  gross_profit = @price - @cost
+  mark_up = (gross_profit/@cost.to_f)*100
+  # binding.pry
+  return mark_up.round(0).to_i
 end
 
 def stock_level()
@@ -81,17 +77,17 @@ def save()
       component,
       cost,
       price,
-      margin,
+
       quantity,
       low_stock,
       critical_stock
     )
     VALUES
     (
-      $1, $2, $3, $4, $5, $6, $7, $8
+      $1, $2, $3, $4, $5, $6, $7
     )
     RETURNING *"
-    values = [@manufacturer_id, @component, @cost, @price, @margin, @quantity, @low_stock, @critical_stock]
+    values = [@manufacturer_id, @component, @cost, @price, @quantity, @low_stock, @critical_stock]
     item_data = SqlRunner.run(sql, values)
     @id = item_data.first()['id'].to_i
 
@@ -105,13 +101,13 @@ def update()
     component,
     cost,
     price,
-    margin,
+
     quantity,
     low_stock,
     critical_stock
-  ) = ($1, $2, $3, $4, $5, $6, $7, $8)
-  WHERE id = $9"
-  values = [@manufacturer_id, @component, @cost, @price, @margin, @quantity, @low_stock, @critical_stock, @id]
+  ) = ($1, $2, $3, $4, $5, $6, $7)
+  WHERE id = $8"
+  values = [@manufacturer_id, @component, @cost, @price, @quantity, @low_stock, @critical_stock, @id]
   item_data = SqlRunner.run(sql, values)
 end
 

@@ -12,7 +12,7 @@
       <th>Component</th>
       <th>Cost</th>
       <th>Price</th>
-      <th>Margin</th>
+      <th>MarkUp(%)</th>
       <th>Quantity</th>
       <th>Low Stock</th>
       <th>Critical Stock</th>
@@ -26,8 +26,8 @@
         <td><%=item.man_name.name%></td>
         <td><%=item.component%></td>
         <td><%=item.cost.to_i%></td>
-        <td><%=item.sale_price.to_i%></td>
-        <td><%=item.margin.to_i%></td>
+        <td><%=item.price.to_i%></td>
+        <td><%=item.markup.to_i%></td>
         <td><%=item.quantity.to_i%></td>
         <td><%=item.low_stock.to_i%></td>
         <td><%=item.critical_stock.to_i%></td>

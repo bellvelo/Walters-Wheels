@@ -9,7 +9,7 @@
       <th>Cost</th>
       <th>Price</th>
       <th>Quantity</th>
-      <td style=color:red;>Margin</th>
+      <td style=color:red;>MarkUp(%)</th>
     </tr>
   </thead>
   <tbody>
@@ -19,9 +19,9 @@
         <td><%=item.man_name.name%></td>
         <td><%=item.component%></td>
         <td><%=item.cost.to_i%></td>
-        <td><%=item.sale_price.to_i%></td>
+        <td><%=item.price.to_i%></td>
         <td><%=item.quantity.to_i%></td>
-        <td style=color:red;><%=item.margin.to_i%></td>
+        <td style=color:red;><%=item.markup.to_i%></td>
       </tr>
     <% end %>
   </tbody>
