@@ -8,8 +8,8 @@
       <th>Component</th>
       <th>Cost</th>
       <th>Price</th>
-      <th>Margin</th>
       <th>Quantity</th>
+      <td style=color:red;>Margin</th>
     </tr>
   </thead>
   <tbody>
@@ -20,8 +20,8 @@
         <td><%=item.component%></td>
         <td><%=item.cost.to_i%></td>
         <td><%=item.sale_price.to_i%></td>
-        <td><%=item.margin.to_i%></td>
         <td><%=item.quantity.to_i%></td>
+        <td style=color:red;><%=item.margin.to_i%></td>
       </tr>
     <% end %>
   </tbody>

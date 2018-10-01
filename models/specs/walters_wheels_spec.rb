@@ -46,6 +46,19 @@ def test_stock_level()
   assert_equal("REORDER NOW", @item1.stock_level())
 end
 
+def test_markup()
+  @item1 = Item.new({
+    # "manufacturer_id" => manufacturer1.id,
+    "component" => "rim",
+    "cost" => 20,
+    "price" => 50,
+    "margin" => 2,
+    "quantitiy" => 5,
+    "low_stock" => 10,
+    "critical_stock" => 6
+  })
+  assert_equal(200, @item1.markup())
+end
 
 # def test_component()
 #   assert_equal("rim", @manufacturer.component())

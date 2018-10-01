@@ -25,6 +25,10 @@ def sale_price()
   return (@cost * @margin)
 end
 
+def markup
+  return (@price/@cost)*100
+end
+
 def stock_level()
   # define warning statements
   low_level = "LOW STOCK"
