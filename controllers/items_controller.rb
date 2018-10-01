@@ -8,7 +8,11 @@ also_reload('./models/*')
 
 get "/items" do  # index of items
   @manufacturers = Manufacturer.all
-  @items = Item.all()
+  if params[:manufacturer_id]
+    @items = Item.get_by_man(params[:manufacturer_id])
+  else
+    @items = Item.all()
+  end
   erb (:"items/index")
 end
 

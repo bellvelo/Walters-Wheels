@@ -4,7 +4,7 @@
   <input type="submit" value="New Item">
 </form>
 
-<form method="get" action="/items">
+<form method="get" action="/items/filter">
 <label for="manufacturer-select">Select Manafacturer</label>
 <select id="manufacturer-select" name="manufacturer_id">
   <%@manufacturers.each do |manufacturer| %>
@@ -13,7 +13,6 @@
 </select>
 <input type="submit" value="Apply"/>
 </form>
-
 
 
 <br>

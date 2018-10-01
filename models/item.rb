@@ -55,8 +55,8 @@ def self.all()
   return result
 end
 
-def self.order_by_profit()
-  sql = "SELECT * FROM items"
+def self.by_profit()
+  sql = "SELECT * FROM items ORDER BY markup"
   items = SqlRunner.run(sql)
   result = items.map {|item| Item.new(item).sort}
   return result
@@ -68,6 +68,14 @@ def self.find(id)
   item = SqlRunner.run(sql, values)
   result = Item.new(item.first)
   return result
+end
+
+def self.get_by_man(manufacturer)
+  sql = "SELECT * FROM items WHERE manufacturer_id = $1"
+  values = [manufacturer]
+  result = SqlRunner.run(sql, values)
+  return result.map {|item| Item.new(item)}
+
 end
 
 def save()
