@@ -43,6 +43,11 @@ def stock_level()
   end
 end
 
+def man_name()
+  man_name = Manufacturer.find(@manufacturer_id)
+  return man_name
+end
+
 def self.all()
   sql = "SELECT * FROM items"
   items = SqlRunner.run(sql)
