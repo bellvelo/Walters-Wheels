@@ -1,8 +1,9 @@
-<h2> List of all Items </h2>
+<h2> Inventory </h2>
 
 <form method="get" action="/items">
-  <label for="manufacturer-select">Select Manufacturer</label>
+  <label for="manufacturer-select">Manufacturer</label>
   <select id="manufacturer-select" selected="manufacturer.id" name="manufacturer_id">
+    <option disabled selected><< select >></option>
     <%@manufacturers.each do |manufacturer| %>
     <option value=<%=manufacturer.id%>><%=manufacturer.name%></option>
     <%end%>
@@ -12,6 +13,8 @@
 <form method="get" action="/items/new">
   <input class="btn btn--input"type="submit" value="New Item">
 </form>
+
+
 <br>
 <table id="all-items">
   <thead>

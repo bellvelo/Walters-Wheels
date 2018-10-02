@@ -1,4 +1,4 @@
-<h2> List of all Manufacturers </h2>
+<h2>Manufacturers</h2>
 
 <form method="get" action="/manufacturers/new">
   <input class="btn btn--input" type="submit" value="New Manufacturer">
@@ -16,13 +16,13 @@
   </thead>
   <tbody>
     <% for manufacturer in @manufacturers%>
-      <tr>
-        <td><%=manufacturer.id%></td>
-        <td><%=manufacturer.name%></td>
-        <td><%=manufacturer.address%></td>
-        <td><%=manufacturer.phone%></td>
-        <td><a href="/manufacturers/<%=manufacturer.id%>">Edit</a></td>
-      </tr>
+    <tr>
+      <td><%=manufacturer.id%></td>
+      <td><%=manufacturer.name%></td>
+      <td><%=manufacturer.address%></td>
+      <td><%=manufacturer.phone%></td>
+      <td><a href="/manufacturers/<%=manufacturer.id%>">Edit</a></td>
+    </tr>
     <% end %>
   </tbody>
 </table>

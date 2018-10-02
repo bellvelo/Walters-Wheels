@@ -4,7 +4,7 @@ require('pry')
 class Item
 
   attr_reader :id
-  attr_accessor :manufacturer_id, :component, :cost, :price, :margin, :quantity, :low_stock, :critical_stock
+  attr_accessor :manufacturer_id, :component, :cost, :price, :quantity, :low_stock, :critical_stock
 
   def initialize(options)
     @id = options["id"].to_i
@@ -12,7 +12,6 @@ class Item
     @component = options["component"]
     @cost = options["cost"].to_i
     @price = options["price"].to_i
-    # @margin = options["margin"].to_i
     @quantity = options["quantity"].to_i
     @low_stock = options["low_stock"].to_i
     @critical_stock = options["critical_stock"].to_i
@@ -21,7 +20,6 @@ class Item
   def markup
     gross_profit = @price - @cost
     mark_up = (gross_profit/@cost.to_f)*100
-    # binding.pry
     return mark_up.round(0).to_i
   end
 

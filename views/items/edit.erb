@@ -3,15 +3,15 @@
 <form method="post" action="/items/<%=@item.id%>">
 
   <label for="manufacturer-select">Select Manafacturer</label>
-    <select id="manufacturer-select" name="manufacturer_id">
-      <%@manufacturers.each do |manufacturer| %>
-        <option value=<%=manufacturer.id%>><%=manufacturer.name%></option>
-      <%end%>
-    </select>
+  <select id="manufacturer-select" name="manufacturer_id">
+    <%@manufacturers.each do |manufacturer| %>
+    <option value=<%=manufacturer.id%>><%=manufacturer.name%></option>
+    <%end%>
+  </select>
 
   <label for="component">Component:</label>
   <input id="component" value ="<%=@item.component%>" type="text" name="component"/>
-<br><br>
+  <br><br>
   <label for="cost">Cost:</label>
   <input id="cost" value ="<%=@item.cost%>" type="number" name="cost" min="1"/>
 
@@ -23,7 +23,7 @@
 
   <label for="quantity">Quantity:</label>
   <input id="quantity"value ="<%=@item.quantity%>" type="number" name="quantity" min="1"/>
-<br><br>
+  <br><br>
   <label for="low_stock">Low Stock:</label>
   <input id="low_stock"value ="<%=@item.low_stock%>" type="number" name="low_stock" min="1"/>
 

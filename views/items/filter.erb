@@ -5,15 +5,14 @@
 </form>
 
 <form method="get" action="/items/filter">
-<label for="manufacturer-select">Select Manafacturer</label>
-<select id="manufacturer-select" name="manufacturer_id">
-  <%@manufacturers.each do |manufacturer| %>
-  <option value=<%=manufacturer.id%>><%=manufacturer.name%></option>
-  <%end%>
-</select>
-<input class="btn btn--input" type="submit" value="Apply"/>
+  <label for="manufacturer-select">Select Manafacturer</label>
+  <select id="manufacturer-select" name="manufacturer_id">
+    <%@manufacturers.each do |manufacturer| %>
+    <option value=<%=manufacturer.id%>><%=manufacturer.name%></option>
+    <%end%>
+  </select>
+  <input class="btn btn--input" type="submit" value="Apply"/>
 </form>
-
 
 <br>
 <table id="all-items">
@@ -33,18 +32,18 @@
   </thead>
   <tbody>
     <% for item in @items%>
-      <tr>
-        <td><%=item.id%></td>
-        <td><%=item.man_name.name%></td>
-        <td><%=item.component%></td>
-        <td><%=item.cost.to_i%></td>
-        <td><%=item.price.to_i%></td>
-        <td><%=item.markup.to_i%></td>
-        <td><%=item.quantity.to_i%></td>
-        <td><%=item.low_stock.to_i%></td>
-        <td><%=item.critical_stock.to_i%></td>
-        <td><a href="/items/<%=item.id%>">Edit</a></td>
-      </tr>
+    <tr>
+      <td><%=item.id%></td>
+      <td><%=item.man_name.name%></td>
+      <td><%=item.component%></td>
+      <td><%=item.cost.to_i%></td>
+      <td><%=item.price.to_i%></td>
+      <td><%=item.markup.to_i%></td>
+      <td><%=item.quantity.to_i%></td>
+      <td><%=item.low_stock.to_i%></td>
+      <td><%=item.critical_stock.to_i%></td>
+      <td><a href="/items/<%=item.id%>">Edit</a></td>
+    </tr>
     <%end%>
   </tbody>
 </table>

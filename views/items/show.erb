@@ -12,11 +12,8 @@
 </ul>
 
 <form method="post" action="/items/<%=@item.id%>/delete">
-  <input class="btn btn--input" type="submit" value="Delete Item">  <!--submit is a type of button -->
+  <input class="btn btn--input" type="submit" value="Delete Item">  
 </form>
-<!--
-method = verb - either post or get, depending on REST route,
-action = the URL of the path -->
 
 <form method="get" action="/items/<%=@item.id%>/edit">
   <input class="btn btn--input" type="submit" value="Edit Item">

@@ -6,28 +6,24 @@ manufacturer1 = Manufacturer.new ({
   "name" => "Shimano",
   "address" => "105 Ultegra Blv'd, Tokyo",
   "phone" => "111-27",
-  # "item_id" => item1.id
 })
 manufacturer1.save()
 manufacturer2 = Manufacturer.new ({
   "name" => "Chris King",
   "address" => "123 Steel Street, Oregon",
   "phone" => "13-356",
-  # "item_id" => item2.id
 })
 manufacturer2.save()
 manufacturer3 = Manufacturer.new ({
   "name" => "Continental",
   "address" => "33 Rubber Road, Koblenz",
   "phone" => "53-234",
-  # "item_id" => item4.id
 })
 manufacturer3.save()
 manufacturer4 = Manufacturer.new ({
   "name" => "Zipp",
   "address" => "303 Airblade Avenue, Indiana",
-  "phone" => "111-2",
-  # "item_id" => item3.id
+  "phone" => "111-21",
 })
 manufacturer4.save()
 
@@ -36,7 +32,6 @@ item1 = Item.new({
   "component" => "rim",
   "cost" => 150,
   "price" => 200,
-  # "margin" => 3,
   "quantity" => 30,
   "low_stock" => 10,
   "critical_stock" => 6
@@ -47,7 +42,6 @@ item2 = Item.new({
   "component" => "hub",
   "cost" => 105,
   "price" => 150,
-  # "margin" => 3,
   "quantity" => 15,
   "low_stock" => 5,
   "critical_stock" => 2
@@ -58,7 +52,6 @@ item3 = Item.new({
   "component" => "spoke",
   "cost" => 4,
   "price" => 6,
-  # "margin" => 4,
   "quantity" => 49,
   "low_stock" => 50,
   "critical_stock" => 25
@@ -69,7 +62,6 @@ item4 = Item.new({
   "component" => "tyre",
   "cost" => 25,
   "price" => 35,
-  # "margin" => 2,
   "quantity" => 60,
   "low_stock" => 20,
   "critical_stock" => 10
@@ -80,7 +72,6 @@ item5 = Item.new({
   "component" => "inner-tube",
   "cost" => 5,
   "price" => 7,
-  # "margin" => 2,
   "quantity" => 5,
   "low_stock" => 20,
   "critical_stock" => 10
@@ -91,7 +82,6 @@ item6 = Item.new({
   "component" => "free-hub",
   "cost" => 55,
   "price" => 90,
-  # "margin" => 2,
   "quantity" => 10,
   "low_stock" => 10,
   "critical_stock" => 5
@@ -102,7 +92,6 @@ item7 = Item.new({
   "component" => "aero-blades",
   "cost" => 130,
   "price" => 175,
-  # "margin" => 2,
   "quantity" => 2,
   "low_stock" => 5,
   "critical_stock" => 3
@@ -113,7 +102,6 @@ item8 = Item.new({
   "component" => "carbon rim",
   "cost" => 165,
   "price" => 250,
-  # "margin" => 2,
   "quantity" => 10,
   "low_stock" => 6,
   "critical_stock" => 3

@@ -6,17 +6,17 @@ require_relative('../models/item')
 require_relative('../models/manufacturer')
 also_reload('./models/*')
 
-get "/items" do  # index of items
+get "/items" do
   @manufacturers = Manufacturer.all
   if params[:manufacturer_id]
     @items = Item.get_by_man(params[:manufacturer_id])
   else
     @items = Item.all()
   end
-  erb (:"items/index")
+  erb(:"items/index")
 end
 
-get "/items/new" do # fetch form to create new record
+get "/items/new" do
   @manufacturers = Manufacturer.all
   @items = Item.all()
   erb(:"items/new")
@@ -28,14 +28,12 @@ get "/items/:id" do
   erb(:"items/show")
 end
 
-post "/items"  do # create new record
+post "/items"  do
   @manufacturers = Manufacturer.all
   @item = Item.new(params)
   @item.save()
   redirect to("/items")
 end
-
-## update record ##
 
 get "/items/:id/edit" do
   @manufacturers = Manufacturer.all
@@ -49,8 +47,6 @@ post "/items/:id" do
   @item.update()
   redirect to("/items")
 end
-
-## delete records  ##
 
 post "/items/:id/delete" do
   @item = Item.find(params[:id])

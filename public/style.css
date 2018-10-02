@@ -1,18 +1,15 @@
 h1{
-  color: #B8D8D8;
-  /* font-size: 30px; */
+  color: white;
   font-family: Verdana;
 }
 h2{
   color: #4F6367;
-  /* font-size: 30px; */
   font-family: Verdana;
+  margin: 5px;
 }
-
-body {
-  /* background-image: url('/images/mont-ventoux.jpg'); */
+p {
+  font-family: arial
 }
-
 .banner {
   background-color: #7A9E9F;
   border: 1px solid #FE5F55;
@@ -20,23 +17,20 @@ body {
   text-align: center;
   margin: 0;
 }
-
 .yield-info {
   background-color: #B8D8D8;
   border: 1px solid #FE5F55;
   opacity: 0.8;
-  padding: 10px;
+  padding: 5px 10px 10px 10px;
 }
-
 img {
     width: 100%;
     border: 1px solid #FE5F55;
-  }
-
+}
+/* NAVBAR */
 * {
     box-sizing: border-box;
 }
-
 .navbar {
     display: flex;
     background-color: #FE5F55;
