@@ -10,25 +10,25 @@
     </select>
 
   <label for="component">Component:</label>
-  <input value ="<%=@item.component%>" type="text" name="component"/>
+  <input id="component" value ="<%=@item.component%>" type="text" name="component"/>
 <br><br>
   <label for="cost">Cost:</label>
-  <input value ="<%=@item.cost%>" type="number" name="cost" min="1"/>
+  <input id="cost" value ="<%=@item.cost%>" type="number" name="cost" min="1"/>
 
   <label for="price">Price:</label>
-  <input value ="<%=@item.price%>" type="number" name="price" min="1"/>
+  <input id="price" value ="<%=@item.price%>" type="number" name="price" min="1"/>
 
   <!-- <label for="margin">Margin:</label>
   <input value ="<%=@item.markup%>" type="number" name="margin" min="1"/> -->
 
   <label for="quantity">Quantity:</label>
-  <input value ="<%=@item.quantity%>" type="number" name="quantity" min="1"/>
+  <input id="quantity"value ="<%=@item.quantity%>" type="number" name="quantity" min="1"/>
 <br><br>
   <label for="low_stock">Low Stock:</label>
-  <input value ="<%=@item.low_stock%>" type="number" name="low_stock" min="1"/>
+  <input id="low_stock"value ="<%=@item.low_stock%>" type="number" name="low_stock" min="1"/>
 
   <label for="critical_stock">Critical Stock:</label>
-  <input value ="<%=@item.critical_stock%>" type="number" name="critical_stock" min="1"/>
+  <input id="critical_stock" value ="<%=@item.critical_stock%>" type="number" name="critical_stock" min="1"/>
 
   <input type="submit" value="Edit item"/>
 </form>

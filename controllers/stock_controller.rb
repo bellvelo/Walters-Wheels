@@ -7,7 +7,7 @@ require_relative('../models/manufacturer')
 also_reload('./models/*')
 
 get "/stock" do
-  @items = Item.all()
+  @items = Item.stock_warn()
   @manufacturers = Manufacturer.all()
   erb(:"stock/index")
 end

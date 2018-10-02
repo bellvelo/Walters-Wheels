@@ -43,7 +43,7 @@ img {
     justify-content: space-around;
 }
 .navbar a {
-    color: snow;
+    color: ghostwhite;
     padding: 10px 20px;
     text-decoration: none;
     text-align: center;
@@ -51,6 +51,5 @@ img {
     font-size: 15px;
 }
 .navbar a:hover {
-    color: white;
-    font-weight: bold;
-}    
+    color: #B8D8D8;
+}

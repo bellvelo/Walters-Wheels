@@ -1,7 +1,7 @@
 <h2> List of all Items </h2>
 
 <form method="get" action="/items">
-  <label for="manufacturer-select">Select Manafacturer</label>
+  <label for="manufacturer-select">Select Manufacturer</label>
   <select id="manufacturer-select" name="manufacturer_id">
     <%@manufacturers.each do |manufacturer| %>
     <option value=<%=manufacturer.id%>><%=manufacturer.name%></option>
@@ -21,7 +21,7 @@
       <th>Component</th>
       <th>Cost</th>
       <th>Price</th>
-      <th>MarkUp(%)</th>
+      <th>Mark Up(%)</th>
       <th>Quantity</th>
       <th>Low Stock</th>
       <th>Critical Stock</th>
