@@ -2,7 +2,7 @@
 
 <form method="get" action="/items">
   <label for="manufacturer-select">Select Manufacturer</label>
-  <select id="manufacturer-select" name="manufacturer_id">
+  <select id="manufacturer-select" selected="manufacturer.id" name="manufacturer_id">
     <%@manufacturers.each do |manufacturer| %>
     <option value=<%=manufacturer.id%>><%=manufacturer.name%></option>
     <%end%>

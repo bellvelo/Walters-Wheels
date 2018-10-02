@@ -1,14 +1,15 @@
 <h2>Item Details</h2>
 
-<p>Item ID: <%= @item.id %></p>
-<p>Man ID: <%= @item.manufacturer_id %></p>
-<p>Component: <%= @item.component %></p>
-<p>Cost: <%= @item.cost.to_i %></p>
-<p>Price: <%= @item.price.to_i %></p>
-<p>Quantity: <%= @item.quantity.to_i %></p>
-<p>Low Stock: <%= @item.low_stock.to_i %></p>
-<p>Critical Stock: <%= @item.critical_stock.to_i %></p>
-
+<ul>
+  <li>Item ID: <%= @item.id %></li>
+  <li>Man ID: <%= @item.manufacturer_id %></li>
+  <li>Component: <%= @item.component %></li>
+  <li>Cost: <%= @item.cost.to_i %></li>
+  <li>Price: <%= @item.price.to_i %></li>
+  <li>Quantity: <%= @item.quantity.to_i %></li>
+  <li>Low Stock: <%= @item.low_stock.to_i %></li>
+  <li>Critical Stock: <%= @item.critical_stock.to_i %></li>
+</ul>
 
 <form method="post" action="/items/<%=@item.id%>/delete">
   <input type="submit" value="Delete Item">  <!--submit is a type of button -->

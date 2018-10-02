@@ -2,13 +2,13 @@
 <form method="post" action="/manufacturers/<%=@manufacturer.id%>">
 
   <label for="name">Name:</label>
-  <input value ="<%=@manufacturer.name%>" type="text" name="name"/>
+  <input id="name" value ="<%=@manufacturer.name%>" type="text" name="name"/>
 
   <label for="address">Address:</label>
-  <input value ="<%=@manufacturer.address%>" type="text" name="address"/>
+  <input id="address" value ="<%=@manufacturer.address%>" type="text" name="address"/>
 
   <label for="phone">Phone:</label>
-  <input value ="<%=@manufacturer.phone%>" type="text" name="phone"/>
+  <input id="phone" value ="<%=@manufacturer.phone%>" type="text" name="phone"/>
 <br><br>
   <input type="submit" value="Edit Manufacturer"/>
 </form>
