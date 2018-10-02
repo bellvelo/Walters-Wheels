@@ -56,7 +56,7 @@ class Item
   end
 
   def self.by_profit()
-    sql = "SELECT * FROM items ORDER BY ((@price-@cost)/@cost.to_f)*100"
+    sql = "SELECT * FROM items ORDER BY component"
     items = SqlRunner.run(sql)
     result = items.map {|item| Item.new(item).sort}
     return result

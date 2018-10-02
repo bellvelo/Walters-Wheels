@@ -21,6 +21,10 @@ tr {
   font-family: arial;
 }
 
+tr:nth-child(even) {
+    background-color: red;
+}
+
 #all-items {
   border-collapse: collapse;
   width: 100%;
@@ -36,4 +40,21 @@ tr {
 #critical-stock {
   border-collapse: collapse;
   width: 100%;
+}
+
+.btn {
+  border:0px none;
+  border-radius: 5%;
+  padding: 3px 4px;
+  color: ghostwhite;
+  cursor: pointer;
+  font-family: arial;
+}
+
+.btn--input {
+  background-color: #FE5F55;
+}
+
+.btn--input:hover {
+  background-color: #7A9E9F;
 }
