@@ -56,5 +56,5 @@ tr:nth-child(even) {
 }
 
 .btn--input:hover {
-  background-color: #7A9E9F;
+  background-color: red;
 }
