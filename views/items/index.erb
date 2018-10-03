@@ -1,19 +1,19 @@
 <h2> Inventory </h2>
-
-<form method="get" action="/items">
-  <label for="manufacturer-select">Manufacturer</label>
-  <select id="manufacturer-select" selected="manufacturer.id" name="manufacturer_id">
-    <option disabled selected><< select >></option>
-    <%@manufacturers.each do |manufacturer| %>
-    <option value=<%=manufacturer.id%>><%=manufacturer.name%></option>
-    <%end%>
-  </select>
-  <input class="btn btn--input" type="submit" value="Apply"/>
-</form>
-<form method="get" action="/items/new">
-  <input class="btn btn--input"type="submit" value="New Item">
-</form>
-
+<span>
+  <form method="get" action="/items">
+    <label style="font-family: arial;" for="manufacturer-select">Filter by</label>
+    <select id="manufacturer-select" selected="manufacturer.id" name="manufacturer_id">
+      <option disabled selected>Manufacturer</option>
+      <%@manufacturers.each do |manufacturer| %>
+      <option value=<%=manufacturer.id%>><%=manufacturer.name%></option>
+      <%end%>
+    </select>
+    <input class="btn btn--input" type="submit" value="Apply"/>
+  </form>
+  <form method="get" action="/items/new">
+    <input class="btn btn--input"type="submit" value="New Item">
+  </form>
+</span>
 
 <br>
 <table id="all-items">

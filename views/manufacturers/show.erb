@@ -5,11 +5,11 @@
   <li>Address: <%= @manufacturer.address() %></li>
   <li>Phone: <%= @manufacturer.phone() %></li>
 </ul>
-
-<form method="post" action="/manufacturers/<%=@manufacturer.id%>/delete">
-  <input class="btn btn--input" type="submit" value="Remove Manufacturer">  <!--submit is a type of button -->
-</form>
-
-<form method="get" action="/manufacturers/<%=@manufacturer.id%>/edit">
-  <input class="btn btn--input" type="submit" value="Amend Manufacturer">
-</form>
+<span>
+  <form method="post" action="/manufacturers/<%=@manufacturer.id%>/delete">
+    <input class="btn btn--input" type="submit" value="Remove Manufacturer">  <!--submit is a type of button -->
+  </form>
+  <form method="get" action="/manufacturers/<%=@manufacturer.id%>/edit">
+    <input class="btn btn--input" type="submit" value="Amend Manufacturer">
+  </form>
+</span>

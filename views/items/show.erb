@@ -10,11 +10,12 @@
   <li>Low Stock: <%= @item.low_stock.to_i %></li>
   <li>Critical Stock: <%= @item.critical_stock.to_i %></li>
 </ul>
-
+<span>
 <form method="post" action="/items/<%=@item.id%>/delete">
-  <input class="btn btn--input" type="submit" value="Delete Item">  
+  <input class="btn btn--input" type="submit" value="Delete Item">
 </form>
 
 <form method="get" action="/items/<%=@item.id%>/edit">
   <input class="btn btn--input" type="submit" value="Edit Item">
 </form>
+</span>

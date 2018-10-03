@@ -47,3 +47,24 @@ img {
 .navbar a:hover {
     color: #B8D8D8;
 }
+span form {
+  display: inline-block;
+  margin-bottom: 6px;
+}
+.btn {
+  border:0px none;
+  border-radius: 5%;
+  padding: 3px 4px;
+  color: ghostwhite;
+  cursor: pointer;
+  font-family: arial;
+}
+.btn--input {
+  background-color: #FE5F55;
+}
+.btn--input:hover {
+  background-color: red;
+}
+.select {
+  font-family: arial;
+}
