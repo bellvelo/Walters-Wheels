@@ -10,6 +10,18 @@ get "/items" do
   @manufacturers = Manufacturer.all
   if params[:manufacturer_id]
     @items = Item.get_by_man(params[:manufacturer_id])
+  elsif params[:search_input]
+    @items = Item.search_items(params[:search_input])
+  else
+    @items = Item.all
+  end
+erb (:"items/index")
+end
+
+get "/items" do
+  @manufacturers = Manufacturer.all
+  if params[:manufacturer_id]
+    @items = Item.get_by_man(params[:manufacturer_id])
   else
     @items = Item.all()
   end

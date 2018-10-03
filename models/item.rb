@@ -17,6 +17,15 @@ class Item
     @critical_stock = options["critical_stock"].to_i
   end
 
+  def self.search_items(search_input)
+    sql = "SELECT * FROM items
+    WHERE component ILIKE '%' || $1 || '%'
+    "
+    values = [search_input]
+    result = SqlRunner.run(sql, values)
+    return result.map {|item_hash| Item.new(item_hash)}
+  end
+
   def markup
     gross_profit = @price - @cost
     mark_up = (gross_profit/@cost.to_f)*100
